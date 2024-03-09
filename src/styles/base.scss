@@ -1,0 +1,36 @@
+@use "./constants.module.scss" as constants;
+@use "./functions.module.scss" as functions;
+@use "./mixin.module.scss" as mixin;
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+[class*="__container"] {
+  max-width: functions.rem(constants.$maxWidthContainer);
+  margin: 0 auto;
+
+  padding-top: functions.rem(20);
+  padding-bottom: functions.rem(40);
+  @include mixin.adaptiveClamp(
+    $property: padding-left,
+    $startSize: 40,
+    $minSize: 16
+  );
+  @include mixin.adaptiveClamp(
+    $property: padding-right,
+    $startSize: 40,
+    $minSize: 16
+  );
+}

@@ -1,0 +1,16 @@
+@use "../../styles/constants.module.scss" as constants;
+@use "../../styles/functions.module.scss" as functions;
+@use "../../styles/mixin.module.scss" as mixin;
+
+.container {
+  margin-bottom: functions.rem(20);
+  background-color: constants.$whiteColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
