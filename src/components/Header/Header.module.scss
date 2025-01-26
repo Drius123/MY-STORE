@@ -1,3 +1,13 @@
 @use "../../styles/constants.module.scss" as constants;
 @use "../../styles/functions.module.scss" as functions;
 @use "../../styles/mixin.module.scss" as mixin;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: functions.rem(59);
+  background: constants.$bgHeader;
+  box-shadow: constants.$bgShadowHeader;
+  font-family: "Lora Bold", sans-serif;
+}
